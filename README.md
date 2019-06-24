@@ -1,7 +1,6 @@
 # vue_teaching
 
-> A Vue.js project
-
+> 学习Vue的笔记和代码
 ## Build Setup
 
 ``` bash
