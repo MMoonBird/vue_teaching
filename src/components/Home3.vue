@@ -1,6 +1,7 @@
 <template>
     <div>
-      <v-header :title="title"></v-header>
+      <!--这里:home是将当前这个home对象传递给子组件-->
+      <v-header :title="title" :homemsg="msg" :run="run" :home="this"></v-header>
       首页组件
     </div>
 </template>
@@ -20,6 +21,12 @@
       data(){
           return {
               title:'首页',
+              msg:'我是Home组件'
+          }
+      },
+      methods:{
+          run(data){
+            alert("我是home组件run方法----"+data);
           }
       },
       components:{
