@@ -74,7 +74,7 @@
   *   组件挂载，更新，销毁时触发的一系列方法。
   */
   /*import Home from './components/Home.vue';//引入组件*/
-  import HomePage from './components/HomePage'
+  import HomePage from './components/Home3'
   import life from './components/life';
 export default {
   data(){//业务逻辑里定义的数据

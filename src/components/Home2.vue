@@ -22,8 +22,13 @@
     *       3,需要调用Vue.use()函数使用vue-resource
     *       4,在组件里直接使用this.$http.get.then的方式获取数据
     *   axios
+    *   使用axios获取请求数据的步骤
+    *       1,安装 npm install axios --save
+    *       2,哪里使用哪里引入
+    *
     *   fetch-json
     */
+    import axios from 'axios'
     export default {
         name: "HomePage",
         data(){
@@ -36,12 +41,18 @@
         methods:{
             getData(){
                 var url="http://www.phonegap100.com/appapi.php?a=getPortalList&catid=20&page=1";
-              this.$http.get(url).then(function(response){
+           /*   this.$http.get(url).then(function(response){
                     console.info(response);
                     this.list = response.body.result;
               },function(err){
                     console.info(err);
-              })
+              })*/
+           axios.get(url).then((response)=> {
+              console.info(response);
+              this.list = response.data.result;
+           }).catch((error)=>{
+              console.info(error);
+           })
             }
         }
     }
