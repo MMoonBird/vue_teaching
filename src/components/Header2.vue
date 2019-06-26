@@ -20,7 +20,11 @@
           }
       },
       /*这里home接收的是父组件的对象home*/
-      props:['title','homemsg',"run","home"]
+      props:{
+        /*验证父组件传值的正确性*/
+        'title':String,
+      /*  ['title','homemsg',"run","home"]*/
+      }
     }
 </script>
 
