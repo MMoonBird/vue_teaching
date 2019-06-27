@@ -1,6 +1,9 @@
 <template>
   <div>
     <v-header ref="header"></v-header>
+    <hr>
+    首页组件
+    <button @click="getChildData()">获取子组件的数据和方法</button>
   </div>
 
 
@@ -19,8 +22,22 @@
   import header from './Header3'
     export default {
         name: "Home4",
+      data(){
+        return{
+
+        }
+      },
       components:{
           "v-header":header
+      },
+      methods:{
+          run(/*data*/){
+            alert("我是Home组件的run方法"/*+data*/);
+          },
+        getChildData(){
+          //alert(this.$refs.header);//获取dom节点
+          this.$refs.header.run();
+        }
       }
     }
 </script>

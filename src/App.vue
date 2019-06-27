@@ -54,7 +54,8 @@
     -->
     <!--组件-->
     <v-home></v-home>
-
+    <hr>
+    <v-new></v-new>
 
 
   </div>
@@ -74,7 +75,8 @@
   *   组件挂载，更新，销毁时触发的一系列方法。
   */
   /*import Home from './components/Home.vue';//引入组件*/
-  import HomePage from './components/Home3'
+  import HomePage from './components/Home5'
+  import News from './components/News'
   import life from './components/life';
 export default {
   data(){//业务逻辑里定义的数据
@@ -111,6 +113,7 @@ export default {
   }, components:{
     //在html中使用的名字
     'v-home':HomePage,//挂载组件
+    'v-new':News
   },mounted() {
     console.info("我是一个生命周期函数");
   }
