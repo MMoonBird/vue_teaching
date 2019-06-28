@@ -52,11 +52,17 @@
 
     <hr>
     -->
-    <!--组件-->
+<!--
+    &lt;!&ndash;组件&ndash;&gt;
     <v-home></v-home>
     <hr>
     <v-new></v-new>
 
+-->
+    <router-link to="/home">首页</router-link>
+    <router-link to="/news">新闻</router-link>
+    <hr>
+    <router-view></router-view>
 
   </div>
 </template>
@@ -77,11 +83,11 @@
   /*import Home from './components/Home.vue';//引入组件*/
   import HomePage from './components/Home5'
   import News from './components/News'
-  import life from './components/life';
+ /* import life from './components/life';*/
 export default {
   data(){//业务逻辑里定义的数据
       return{
-        msg:'你好vue',
+       /* msg:'你好vue',
         object:{
             name:'张三',
           },
@@ -103,20 +109,20 @@ export default {
               ]
           },
         ],
-        /*-------------------------------------------------------------------------------*/
+        /!*-------------------------------------------------------------------------------*!/
         title:'我是一个title',
         h:'<h2>我是h2<h2>',
-        /*--------------------------------------------------------------------------*/
-        flag:true
+        /!*--------------------------------------------------------------------------*!/
+        flag:true*/
       }
 
-  }, components:{
-    //在html中使用的名字
+  },/* components:{
+    /!*!//在html中使用的名字
     'v-home':HomePage,//挂载组件
-    'v-new':News
+    'v-new':News*!/
   },mounted() {
-    console.info("我是一个生命周期函数");
-  }
+   /!* console.info("我是一个生命周期函数");*!/
+  }*/
 
 }
 </script>
